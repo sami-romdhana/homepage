@@ -1,0 +1,43 @@
+html {
+  background: var(--color-background);
+  background-image: radial-gradient(
+      ellipse at top right,
+      var(--color-background-gradient2),
+      transparent
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--color-background),
+      var(--color-background-gradient1)
+    );
+  color: var(--color-text);
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h1:after {
+  content: "404";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+}
+
+a {
+  margin-top: 1em;
+}

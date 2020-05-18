@@ -1,0 +1,14 @@
+:root {
+  --font-text: "Public Sans", sans-serif;
+  --color-background: rgb(148, 7, 177);
+  --color-background-gradient1: rgb(65, 27, 170);
+  --color-background-gradient2: rgba(189, 94, 16, 0.85);
+  --color-foreground: rgba(255, 255, 255, 0.02);
+  --color-text: rgb(233, 217, 236);
+  --color-text-subtle: rgba(255, 255, 255, 0.2);
+  --color-text-shadow: rgba(0, 0, 0, 0.3);
+  --color-link: #fafafa;
+  --color-link-underline: rgba(255, 255, 255, 0.5);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --size-text: 16px;
+}

@@ -1,0 +1,29 @@
+@import "reset.css";
+@import "variables.css";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-family: var(--font-text);
+  font-size: var(--size-text);
+}
+
+a {
+  color: var(--color-link);
+  border-bottom: 1px solid var(--color-link-underline);
+  text-decoration: none;
+  transition: border-bottom-color 0.1s;
+}
+
+a:hover {
+  border-bottom-color: var(--color-text);
+}
