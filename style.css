@@ -1,0 +1,135 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-text: "Public Sans", sans-serif;
+  --color-background: rgb(148, 7, 177);
+  --color-background-gradient1: rgb(65, 27, 170);
+  --color-background-gradient2: rgba(189, 94, 16, 0.7);
+  --color-foreground: rgba(255, 255, 255, 0.02);
+  --color-text: rgba(255, 255, 255, 0.8);
+  --color-text-subtle: rgba(255, 255, 255, 0.2);
+  --color-text-shadow: rgba(0, 0, 0, 0.3);
+  --color-link: white;
+  --color-link-underline: rgba(255, 255, 255, 0.4);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --size-text: 16px;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  background: var(--color-background);
+  background-image: radial-gradient(
+      ellipse at top right,
+      var(--color-background-gradient2),
+      transparent
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--color-background),
+      var(--color-background-gradient1)
+    );
+  font-family: var(--font-text);
+  font-size: var(--size-text);
+  color: var(--color-text);
+}
+
+@keyframes appear {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+img {
+  margin-bottom: 40px;
+  animation: appear 0.7s;
+}
+
+img ~ * {
+  animation: appear 1s;
+}
+
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.5;
+  text-shadow: 1px 1px 0 var(--color-text-shadow);
+}
+
+a {
+  color: var(--color-link);
+  border-bottom: 1px solid var(--color-link-underline);
+  text-decoration: none;
+  transition: border-bottom-color 0.1s;
+}
+
+a:hover {
+  border-bottom-color: var(--color-text);
+}
+
+footer {
+  margin-top: 40px;
+  color: var(--color-text-subtle);
+}
+
+@media (min-width: 600px) {
+  html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 10px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-foreground);
+  }
+
+  p {
+    max-width: 50ch;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 599px) {
+  body {
+    margin: 20px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 40px;
+    width: 120px;
+    height: 120px;
+    filter: opacity(0.7);
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
